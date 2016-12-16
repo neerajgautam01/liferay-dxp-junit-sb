@@ -1,0 +1,9 @@
+Bundle-Name: Liferay7MavenSB-api
+Bundle-SymbolicName: com.liferay.maven.test.sb.api
+Bundle-Version: 1.0-SNAPSHOT
+Export-Package:\
+	com.liferay.maven.test.sb.exception,\
+	com.liferay.maven.test.sb.model,\
+	com.liferay.maven.test.sb.service,\
+	com.liferay.maven.test.sb.service.persistence
+-includeresource: META-INF/service.xml=../Liferay7MavenSB-service/service.xml

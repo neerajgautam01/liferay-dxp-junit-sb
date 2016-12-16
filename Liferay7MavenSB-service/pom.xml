@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>Liferay7MavenSB-service</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<powermock.version>1.5.6</powermock.version>
+		<org.springframework-version>4.1.1.RELEASE</org.springframework-version>
+		<liferay.version>7.0.0</liferay.version>
+	</properties>
+
+	<parent>
+		<groupId>com.liferay.maven.test.sb</groupId>
+		<artifactId>Liferay7MavenSB</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<dependencies>
+		<dependency>
+			<groupId>com.liferay</groupId>
+			<artifactId>com.liferay.portal.spring.extender</artifactId>
+			<version>2.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay</groupId>
+			<artifactId>com.liferay.osgi.service.tracker.collections</artifactId>
+			<version>2.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.maven.test.sb</groupId>
+			<artifactId>Liferay7MavenSB-api</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.liferay.portal</groupId>
+			<artifactId>com.liferay.portal.kernel</artifactId>
+			<version>2.6.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>biz.aQute.bnd</groupId>
+			<artifactId>biz.aQute.bnd.annotation</artifactId>
+			<version>3.2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>biz.aQute.bnd</groupId>
+			<artifactId>biz.aQute.bndlib</artifactId>
+			<version>3.1.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.portlet</groupId>
+			<artifactId>portlet-api</artifactId>
+			<version>2.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>com.liferay.portal</groupId> <artifactId>util-bridges</artifactId> 
+			<version>${liferay.version}</version> <scope>provided</scope> </dependency> 
+			<dependency> <groupId>com.liferay.portal</groupId> <artifactId>util-taglib</artifactId> 
+			<version>${liferay.version}</version> <scope>provided</scope> </dependency> 
+			<dependency> <groupId>com.liferay.portal</groupId> <artifactId>util-java</artifactId> 
+			<version>${liferay.version}</version> <scope>provided</scope> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/com.liferay/com.liferay.registry.api -->
+		<!-- <dependency> <groupId>com.liferay</groupId> <artifactId>com.liferay.registry.api</artifactId> 
+			<version>1.0.4</version> </dependency> <dependency> <groupId>com.liferay.portal</groupId> 
+			<artifactId>com.liferay.util.taglib</artifactId> <version>2.0.0</version> 
+			<scope>provided</scope> </dependency> <dependency> <groupId>jstl</groupId> 
+			<artifactId>jstl</artifactId> <version>1.2</version> <scope>provided</scope> 
+			</dependency> -->
+		<!-- https://mvnrepository.com/artifact/com.liferay/com.liferay.osgi.util -->
+		<!-- <dependency>
+			<groupId>com.liferay</groupId>
+			<artifactId>com.liferay.osgi.util</artifactId>
+			<version>3.0.0</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.core</artifactId>
+			<version>6.0.0</version>
+			<scope>test</scope>
+		</dependency> -->
+
+
+
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework-version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>${powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>${powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency> <groupId>com.liferay</groupId> <artifactId>com.liferay.arquillian.extension.junit.bridge</artifactId> 
+			<version>1.0.3</version> </dependency> -->
+
+	</dependencies>
+	<build>
+		<testResources>
+			<testResource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>com.liferay</groupId>
+				<artifactId>com.liferay.portal.tools.service.builder</artifactId>
+				<version>1.0.123</version>
+				<configuration>
+					<apiDirName>../Liferay7MavenSB-api/src/main/java</apiDirName>
+					<autoNamespaceTables>true</autoNamespaceTables>
+					<buildNumberIncrement>true</buildNumberIncrement>
+					<hbmFileName>src/main/resources/META-INF/module-hbm.xml</hbmFileName>
+					<implDirName>src/main/java</implDirName>
+					<modelHintsFileName>src/main/resources/META-INF/portlet-model-hints.xml</modelHintsFileName>
+					<osgiModule>true</osgiModule>
+					<propsUtil>com.liferay.maven.test.sb.service.util.ServiceProps</propsUtil>
+					<resourcesDirName>src/main/resources</resourcesDirName>
+					<springFileName>src/main/resources/META-INF/spring/module-spring.xml</springFileName>
+					<sqlDirName>src/main/resources/META-INF/sql</sqlDirName>
+					<sqlFileName>tables.sql</sqlFileName>
+					<!-- <testDirName>src/test/java</testDirName> -->
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+</project>
